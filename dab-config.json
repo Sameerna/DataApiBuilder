@@ -54,6 +54,39 @@
           ]
         }
       ]
+    },
+"getMovies": {
+      "source": {
+        "object": "dneg.USP_getMovies",
+        "type": "stored-procedure",
+		"parameters": {
+          "MovieCode": ""
+        } 
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "query",
+        "type": {
+          "singular": "USP_getMovie",
+          "plural": "USP_getMovies"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "methods": [
+          "get"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "execute"
+            }
+          ]
+        }
+      ]
     }
   }
 }
